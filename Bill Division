@@ -1,0 +1,16 @@
+Question Link --> 
+https://www.hackerrank.com/challenges/bon-appetit/problem?isFullScreen=true
+
+Cdoe --> 
+
+n,k = map(int,input().split())
+arr1 = list(map(int,input().strip().split()))
+cost = int(input())
+sum1 = 0
+sum1 = sum(arr1)
+fair = 0
+fair = int((sum1 - arr1[k])/2)
+if fair == cost :
+    print("Bon Appetit")
+else :
+    print(cost-fair)    
