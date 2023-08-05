@@ -1,0 +1,15 @@
+Question Link --> https://www.hackerrank.com/challenges/designer-pdf-viewer/problem?isFullScreen=true
+
+
+arr = list(map(int,input().strip().split()))
+s = input()
+indexx=0
+arr2 = []
+for i in s :
+    indexx = ord(i) - ord('a')
+    arr2.append(arr[indexx])
+arr2.sort(reverse=True)
+h=0
+h=arr2[0]
+w=len(s)
+print(h*w) 
