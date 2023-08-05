@@ -1,0 +1,7 @@
+Question Link --> https://www.hackerrank.com/challenges/find-the-median/problem?h_r=profile&isFullScreen=true
+
+
+n = int(input())
+arr = list(map(int,input().strip().split()))
+arr.sort()
+print(arr[n//2])
