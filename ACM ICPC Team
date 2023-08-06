@@ -1,0 +1,59 @@
+Question Link --> 
+https://www.hackerrank.com/challenges/acm-icpc-team/problem?isFullScreen=false
+
+
+
+Expanation --> 
+
+In this question we need to provide the output as the team who knows maximum number of topics and the team knows how many topics.
+.Here we only have the topics know to the attendees 
+1 represents the topic known and the 0 represents the topic not known 
+So here we have taken  the input as the list where each element of the array is the binary string topic known and not known to the attende 
+And here we need to form the teams of two 
+.so we have taken a variable which will have the first attende and the variable b which is the second attende 
+And then again a for loop which will run and check all the elements of the string if at least one attende know the topic then we increase the counter ans by 1
+And all the teams are formed and have there respective atendes in a and b 
+And when the ans is increassed by 1 and when it is out of the loop it will contain the total topics kow to the team 
+And then we will make a list of ans which will contain the topics know to the each team 
+So we use max function to take out the maximum value form the array 
+And count to count the number of maximum elements in the array.
+And return both the count and maximum value 
+
+
+Code --> 
+
+#!/bin/python3
+
+
+import math
+import os
+import random
+import re
+import sys
+n,m = map(int,input().split())
+topics = []
+for i in range(n):
+    topic = input()
+    topics.append(topic)
+    
+topics2 = topics 
+arr=[]
+for i in range(0,n-1):
+     a = topics[i]
+    
+     for j in range(i+1,n):
+        b = topics[j]
+        ans=0
+       
+        for k in range(0,len(a)):
+            if a[k] == '1' or b[k]=='1' :
+                ans=ans+1
+              
+        arr.append(ans)   
+
+
+ele = max(arr)        
+    
+print(ele)
+print(arr.count(ele))
+
