@@ -1,0 +1,31 @@
+Question Link -->
+https://www.hackerrank.com/challenges/divisible-sum-pairs/problem?isFullScreen=true
+
+Code --> 
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+n,k = map(int,input().split())    
+arr = list(map(int,input().strip().split()))
+count=0
+for i in range(n):
+    for j in range(1,n):
+        if i<j :
+         
+           if (arr[i]+arr[j])%k==0 :
+            count+=1
+print(count)            
+
+Explanation --> 
+
+In this question we need to give the output as the number of the sum of two numbers from the given array is divisible by the given number.
+So here i have simply used the two pointers
+First pointer i and the other as j and two nested for loops and in that the if condition to check weather i<j or not 
+In the next i have checked the condition of sum%k is zero or not 
+If it is zero we will increase the counter and if it is not zero then we will do nothing 
+And in the end wen will print the count.
