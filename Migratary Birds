@@ -1,0 +1,25 @@
+Code-->
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+n = int(input())
+arr = list(map(int,input().strip().split()))
+
+bird_map = {}
+max_=[]
+for i in arr :
+    if i in bird_map :
+        bird_map[i]+=1
+    else:
+        bird_map[i]=1    
+
+for i in bird_map:
+    if bird_map.get(i) == max(bird_map.values()):
+        max_.append(i)         
+max_.sort()
+print(max_[0])
