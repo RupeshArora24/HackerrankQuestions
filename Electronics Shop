@@ -1,0 +1,30 @@
+Question Link --> 
+https://www.hackerrank.com/challenges/electronics-shop/copy-from/338215534?isFullScreen=true
+
+Code --> 
+
+#!/bin/python3
+
+import os
+import sys
+
+arr = list(map(int,input().strip().split()))
+b = arr[0]
+n_k=arr[1]
+n_d=arr[2]
+sum1=0
+maximum=0
+keybord = list(map(int,input().strip().split()))
+usb = list(map(int,input().strip().split()))
+
+for i in range(n_k):
+    for j in range(n_d):
+        sum1=keybord[i]+usb[j]
+        if(sum1>maximum) and sum1<=b :
+            maximum=sum1
+
+if maximum==0 : 
+    print(-1)
+else:
+    print(maximum)    
+ 
