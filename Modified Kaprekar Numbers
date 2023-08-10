@@ -1,0 +1,36 @@
+Question Link -->
+https://www.hackerrank.com/challenges/kaprekar-numbers/copy-from/339592111?isFullScreen=true
+
+Code --> 
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+p = int(input())
+q= int(input())
+arr=[]
+if p<2 :
+    print(1,end=" ") 
+for i in range(p,q+1):
+    n = i
+    if n>3:  
+     n=n*n
+     n=str(n)
+     length = len(n)
+     
+     for j in n :
+            n1=int(n[0:length//2])    
+            n2=int(n[length//2:length])
+            
+     if n1+n2 == i :
+         arr.append(i)               
+if len(arr) == 0 :
+    print("INVALID RANGE")    
+else:
+    for k in arr:
+        print(k,end=" ")  
