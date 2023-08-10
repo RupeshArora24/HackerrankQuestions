@@ -1,0 +1,45 @@
+Question Link --> 
+https://www.hackerrank.com/challenges/taum-and-bday/copy-from/339741451?isFullScreen=true
+
+Code --> 
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+t = int(input())
+
+
+while t :
+    sum1 = 0
+    
+    b,w = map(int,input().split())
+    bc,wc,z = map(int,input().split())
+
+
+    if bc>wc :
+        if bc>wc+z : 
+            sum1 = wc*w+(wc+z)*b
+            print(sum1)
+        else:
+            sum1 = wc*w+bc*b
+            print(sum1)    
+            
+    elif bc<wc :
+        
+        if wc>bc+z : 
+            sum1 = (bc+z)*w + bc*b
+            print(sum1)
+        else:
+            sum1 = wc*w+bc*b
+            print(sum1)   
+    
+    else:
+        sum1 = wc*w+bc*b
+        print(sum1)      
+    
+    t=t-1
