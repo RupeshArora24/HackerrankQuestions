@@ -1,0 +1,33 @@
+Question Link -->
+https://www.hackerrank.com/challenges/circular-array-rotation/problem?isFullScreen=true
+
+Code -->
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+n,k,q = map(int,input().split())
+arr = list(map(int,input().strip().split()))
+queries=[]
+while q :
+    num=int(input().strip())
+    queries.append(num)
+    q=q-1
+    
+k=k%n
+new_Arr1=arr[0:n-k]
+new_Arr2=arr[n-k:n]
+new_Arr1.reverse()
+new_Arr2.reverse()
+
+ans=new_Arr1+new_Arr2
+ans.reverse()
+
+for i in range(len(queries)):
+    num1 = queries[i]
+    print(ans[num1])
