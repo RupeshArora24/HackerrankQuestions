@@ -1,0 +1,24 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+t = int(input())
+
+while t :
+  arr=set()  
+  n = int(input())
+  a=int(input())
+  b=int(input())
+  if a>b:
+    a,b = b,a 
+  for i in range(n):
+    num = (i*a + (n-1-i)*b )
+    arr.add(num)
+  arr=list(arr)
+  arr.sort()
+  print(*arr)  
+  t=t-1 
