@@ -1,0 +1,35 @@
+Question Link --> 
+https://www.hackerrank.com/challenges/strange-code/problem?isFullScreen=true
+
+Code -->
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+def strangeCounter(t):
+    # Write your code here
+    time = 3
+    while True:
+        t=t-time 
+        if t<=0 :
+           t=t+time 
+           return time - t + 1
+        time=time*2        
+            
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input().strip())
+
+    result = strangeCounter(t)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+
+
