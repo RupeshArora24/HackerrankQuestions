@@ -1,0 +1,35 @@
+Question Link -->
+https://www.hackerrank.com/challenges/insertionsort1/submissions/code/340300916
+
+Code -->
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+n = int(input())
+arr = list(map(int,input().strip().split()))
+num = arr[-1]
+
+for i in range(n-1,-1,-1):
+    if arr[i-1]>num  and i>0 :
+        arr[i]=arr[i-1]
+        print(*arr)
+    if arr[i]<num :
+        arr[i+1]=num  
+        print(*arr)  
+        break
+    if i==0:
+        arr[i]=num
+        print(*arr)
+        break
+    
+        
+"""  # this third case is here because if the element is smallest then it will be # at 0 and our while loop is running till i>0 so it will not go till 0 which dont make the array sorted so we have maked the another case for i == 0 """
+
+"""you can also say that we can remove the case of i>0 from first if so from there if we do like that then we not get the orignal element of the array it at its forst palce becoz there is suppose 2 4 4 so now we have i till zero so it will not stop and check 4>3 this 4 is the middle 4 so yes so we are in the while so here we change the """
