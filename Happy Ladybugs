@@ -1,0 +1,47 @@
+Question Link --> 
+https://www.hackerrank.com/challenges/happy-ladybugs/problem?isFullScreen=true
+
+Code --> 
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+from collections import Counter 
+
+def ans(arr):
+    s=Counter(arr)
+    for i,j in s.items():
+       if i!='_' and j==1 : 
+           return("NO")                          
+    if s["_"] > 0:
+       return("YES")
+       
+    else:
+       pair=0
+       
+       
+    for i in range(len(arr)-1) :
+           if arr[i]==arr[i+1] :  
+               pair=pair+1
+           elif pair>0 :
+               pair=0    
+           else:
+              return("NO")
+    return("YES")              
+       
+t = int(input())
+
+while t:
+   
+    b=int(input())
+    arr=input()
+   
+    result=ans(arr) 
+    print(result)          
+    t=t-1 
+
+    
