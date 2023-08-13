@@ -1,0 +1,14 @@
+Question Link -->
+https://www.hackerrank.com/challenges/missing-numbers/problem?isFullScreen=true
+
+Code-->
+
+n1=int(input())
+arr1=list(map(int,input().strip().split()))
+n2=int(input())
+arr2=list(map(int,input().strip().split()))
+
+a1=Counter(arr1)
+a2=Counter(arr2)
+ans=a2-a1
+print(*sorted(ans.keys()))
