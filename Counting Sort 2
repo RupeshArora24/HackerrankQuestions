@@ -1,0 +1,30 @@
+Question Link --> 
+https://www.hackerrank.com/challenges/countingsort2/problem?h_r=next-challenge&h_v=zen&isFullScreen=true
+
+Code --> 
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+n = int(input())
+arr=list(map(int,input().strip().split()))
+count =[0]*100
+for i in arr :
+    count[i]+=1
+  
+for i in range(100):    
+    
+ if count[i]==1 :
+    print(i,end=" ")
+ elif count[i]==0 :
+       pass
+ else:
+    while count[i] :
+        print(i,end=" ")
+        count[i]=count[i]-1        
+    
