@@ -1,0 +1,23 @@
+Question Link --> 
+https://www.hackerrank.com/challenges/sock-merchant/problem?isFullScreen=true
+
+Code -->
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+from collections import Counter 
+
+n= int(input())
+arr = list(map(int,input().strip().split()))
+ans=0
+pairs=0
+arr_hashmap=Counter(arr)
+for i in arr_hashmap :
+    pairs=arr_hashmap.get(i)//2 
+    ans=ans+pairs
+    
+print(ans)    
