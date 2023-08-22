@@ -1,0 +1,18 @@
+Question Link -->
+https://www.hackerrank.com/challenges/drawing-book/problem?isFullScreen=true
+
+Code --> 
+
+n = int(input())
+p = int(input())
+if n%2==0 :
+    n=n+1
+ans = 0
+curr=p
+front = curr-0
+back = n-curr
+
+if front>=back :
+    print(back//2)
+elif front<back:
+    print(front//2) 
