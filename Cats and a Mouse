@@ -1,0 +1,26 @@
+Question Link -->
+https://www.hackerrank.com/challenges/cats-and-a-mouse/problem?isFullScreen=true
+
+Code -->
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+t= int(input())
+while t:
+    x,y,z=map(int,input().split())
+    a=0
+    b=0
+    a=abs(x-z)
+    b=abs(y-z)
+    if a>b :
+        print("Cat B")
+    elif(a<b) :
+        print("Cat A")
+    else:
+        print("Mouse C")        
+    t=t-1
