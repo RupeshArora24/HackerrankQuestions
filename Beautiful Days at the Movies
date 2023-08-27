@@ -1,0 +1,25 @@
+Question Link --> 
+https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem?isFullScreen=true
+
+Code-->
+
+i,j,k=map(int,input().split())
+count=0
+def reverse(p):
+    rev=0
+    while p>0 :
+        a=p%10
+        rev=rev*10+a
+        p=p//10
+    
+    return(rev)
+        
+for p in range(i,j+1):
+    n1=p
+    ans=reverse(p)
+    ans=(abs(n1-ans))
+    ans=ans%k
+    if ans==0:
+        count=count+1
+print(count)
+   
