@@ -1,0 +1,35 @@
+Quesstion  Link --> 
+https://www.hackerrank.com/challenges/nested-list/problem?isFullScreen=true
+
+Code-->
+
+if __name__ == '__main__':
+    name1=[]
+    score1=[]
+    n=int(input())
+    for _ in range(n):
+        name = name1.append(input())
+        score = score1.append(float(input()))
+  
+    map1={}
+    
+    for i in range(n):
+        map1[name1[i]]=score1[i]
+        
+    ans=[]
+    for i in map1:
+        if map1.get(i)==min(map1.values()):
+            ans.append(i)
+   
+    for i in ans:
+     del map1[i]
+  
+    ans1=[]
+    for i in map1:
+        if map1.get(i)==min(map1.values()):
+            ans1.append(i)
+            
+    finalans=sorted(ans1)
+    
+    for i in finalans:
+        print(i)
