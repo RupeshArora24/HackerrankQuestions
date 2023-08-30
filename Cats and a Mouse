@@ -9,7 +9,7 @@ import os
 import random
 import re
 import sys
-
+#indian
 t= int(input())
 while t:
     x,y,z=map(int,input().split())
