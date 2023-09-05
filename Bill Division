@@ -1,6 +1,6 @@
 Question Link --> 
 https://www.hackerrank.com/challenges/bon-appetit/problem?isFullScreen=true
-
+# Question  
 Cdoe --> 
 
 n,k = map(int,input().split())
