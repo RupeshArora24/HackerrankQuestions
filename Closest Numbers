@@ -1,0 +1,33 @@
+def closestNumbers(arr):
+    # Write your code here
+    #Step 1 --> Sorting of Array to find the minimum differrence 
+    #Step 2 --> Creation of map and storing the difference of the elements as the values pf the map
+    #Step 3 --> Finding the minimum element and storing its operands in the array
+    #Step 4 --> Displaying of the array
+     
+     arr.sort()
+     store={}
+     ans=[]
+     for i in range(1,n):
+        store[i]=abs(arr[i]-arr[i-1])
+     mini=min(store.values())
+    
+     for i in range(len(store.values())+1) :
+        if store.get(i)==mini:
+            ans.append(arr[i-1])
+            ans.append(arr[i])
+     return(ans) 
+             
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    result = closestNumbers(arr)
+
+    fptr.write(' '.join(map(str, result)))
+    fptr.write('\n')
+
+    fptr.close()
