@@ -9,7 +9,7 @@ for i in range(t):
       extra_choclates = wraps // exch
       
       
-      choclates=choclates+extra_choclates
+      choclates=choclates+extra_choclates    
       
       
       rem_wraps = wraps % exch
