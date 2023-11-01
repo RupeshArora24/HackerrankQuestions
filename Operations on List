@@ -1,0 +1,31 @@
+Link --> 
+https://www.hackerrank.com/challenges/python-lists/problem?isFullScreen=true
+
+if __name__ == '__main__':
+    N = int(input())
+    lis1=[]
+    while(N):
+        lis=list(input().strip().split())
+        operation = lis[0]
+        
+        if operation == 'print' :
+            print(lis1)
+        elif operation == 'append' :
+            lis1.append(int(lis[1]))
+            
+        elif operation == 'sort' :
+            lis1.sort()
+            
+        elif operation == 'remove' :
+            lis1.remove(int(lis[1]))
+          
+        elif operation == 'insert' :
+            lis1.insert(int(lis[1]),int(lis[2]))  
+            
+        elif operation == 'pop' :
+            lis1.pop()     
+        
+        elif operation == 'reverse' :
+            lis1 = lis1[::-1]     
+                   
+        N=N-1
