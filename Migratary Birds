@@ -1,4 +1,4 @@
-Code-->
+#Code 1 -->
 #!/bin/python3
 
 import math
@@ -23,3 +23,15 @@ for i in bird_map:
         max_.append(i)         
 max_.sort()
 print(max_[0])
+
+#Code 2-->
+from colections import Counter
+def migratoryBirds(arr):
+  
+    arr=sorted(arr)
+    lis = Counter(arr)
+    maxi=max(lis.values())
+    for i in lis :
+        if lis[i]==maxi :
+            return(i)
+            
