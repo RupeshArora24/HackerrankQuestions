@@ -4,7 +4,7 @@ https://www.hackerrank.com/challenges/acm-icpc-team/problem?isFullScreen=false
 hh
 Expanation -->    
  
-In this question we need to provide the output as the team who knows maximum number of topics and the team knows how many topics.
+In this question we need to provide the output as the team who knows maximum number of topics and the  team knows how many topics.
 .Here we only have the topics know to the attendees 
 1 represents the topic known and the 0 represents the topic not known 
 So here we have taken  the input as the list where each element of the array is the binary string topic known and not known to the attende 
